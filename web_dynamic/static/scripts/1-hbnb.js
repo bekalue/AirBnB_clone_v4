@@ -1,3 +1,4 @@
+// amenity script
 'use strict';
 $(() => {
   let amenitiesSelected = [];
