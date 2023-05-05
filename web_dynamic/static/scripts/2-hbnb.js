@@ -1,10 +1,11 @@
+// script that listens for changes on each INPUT checkbox tag
 'use strict';
 $(() => {
   let amenitiesSelected = [];
   const selectors = {
     amenitiesHeader: '.amenities > h4',
-    amenityBox: '.amenities > .popover > ul > li > input[type="checkbox:]',
-    amenityItem: '.amenities > .popover > li'
+    amenityBox: '.amenities > .popover > ul > li > input[type="checkbox"]',
+    amenityItem: '.amenities > .popover > ul > li'
   };
   const API_URL = 'http://localhost:5001/api/v1';
 
@@ -28,21 +29,19 @@ $(() => {
         obj => (obj.id !== amenityId) && (obj.name !== amenityName)
       );
     }
-    const amenitiesSelectedNames = amenitiesSelected.map(obj => obj.name).join(', ');
+    const htmlContent = amenitiesSelected.map(obj => obj.name).join(', ');
     $(selectors.amenitiesHeader).html(
-      amenitiesSelected.length > 0 ? amenitiesSelectedNames : '&nbsp;'
+      amenitiesSelected.length > 0 ? htmlContent : '&nbsp;'
     );
   });
 
-  $.get(`${API_URL}/status/`, (data, status) => {
+  $.get(`${API_URL}/status`, (data, status) => {
     if ((status === 'success') && (data.status === 'OK')) {
-      if (!$('DIV#api_status').hasClass('available')) {
-        $('DIV#api_status').addClass('available');
+      if (!$('div#api_status').hasClass('available')) {
+        $('div#api_status').addClass('available');
       }
     } else {
-      if ($('DIV#api_status').hasClass('available')) {
-        $('DIV#api_status').removeClass('available');
-      }
+      $('div#api_status').removeClass('available');
     }
   });
 });

@@ -1,4 +1,4 @@
-// amenity script
+// a script that listens for changes on each INPUT checkbox tag
 'use strict';
 $(() => {
   let amenitiesSelected = [];

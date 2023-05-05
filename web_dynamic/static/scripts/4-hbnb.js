@@ -1,3 +1,4 @@
+// 4. Search
 'use strict';
 $(() => {
   let amenitiesSelected = [];
