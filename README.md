@@ -159,6 +159,7 @@ Bekalu Endrias - [Github](https://github.com/bekalue) / [Twitter](https://twitte
 Jennifer Huang - [Github](https://github.com/jhuang10123) / [Twitter](https://twitter.com/earthtojhuang)  
 Jhoan Zamora - [Github](https://github.com/jzamora5) / [Twitter](https://twitter.com/JhoanZamora10)  
 David Ovalle - [Github](https://github.com/Nukemenonai) / [Twitter](https://twitter.com/disartDave)
+Yabets kifle - [Github](https://github.com/jabez-abija2399/)
 
 Second part of Airbnb: Joann Vuong
 ## License
